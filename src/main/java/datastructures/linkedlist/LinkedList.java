@@ -109,6 +109,16 @@ public class LinkedList {
         return temp;
     }
 
+    //set a value at the index of a linked list
+    public boolean set(int index, int value) {
+        Node temp = get(index);
+        if (temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
+
     //getters and setters
     public void getHead() {
         if (head == null) {

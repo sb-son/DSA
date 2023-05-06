@@ -94,5 +94,36 @@ public class Main {
             ----------------
             3
         */
+
+        //Set a value at an index of the linked list
+        System.out.println("\nSet value at index from linked list:");
+        LinkedList setValueFromLinkedList = new LinkedList(0);
+        setValueFromLinkedList.append(1);
+        setValueFromLinkedList.append(2);
+        setValueFromLinkedList.append(3);
+
+        System.out.println("Linked List before set():");
+        setValueFromLinkedList.printList();
+
+        setValueFromLinkedList.set(2, 99);
+
+        System.out.println("\nLinked List after set():");
+        setValueFromLinkedList.printList();
+
+         /*
+            EXPECTED OUTPUT:
+            ----------------
+            Linked List before set():
+            0
+            1
+            2
+            3
+
+            Linked List after set():
+            0
+            1
+            99
+            3
+        */
     }
 }
