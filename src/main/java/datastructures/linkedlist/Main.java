@@ -25,6 +25,7 @@ public class Main {
          */
 
         /* removing last from a linked list */
+
         System.out.println("\nRemove last from a linked list:");
         // (2) Items - Returns 2 Node
         System.out.println(myLinkedList.removeLast().value);
@@ -32,5 +33,30 @@ public class Main {
         System.out.println(myLinkedList.removeLast().value);
         // (0) Items - Returns null
         System.out.println(myLinkedList.removeLast());
+
+
+        /* prepending to a linked list */
+        LinkedList prependLinkedList = new LinkedList(2);
+        prependLinkedList.append(3);
+
+        System.out.println("\nBefore prepend():");
+        System.out.println("-----------------");
+        prependLinkedList.getHead();
+        prependLinkedList.getTail();
+        prependLinkedList.getLength();
+
+        System.out.println("\nLinked List:");
+        prependLinkedList.printList();
+
+        prependLinkedList.prepend(1);
+
+        System.out.println("\n\nAfter prepend():");
+        System.out.println("----------------");
+        prependLinkedList.getHead();
+        prependLinkedList.getTail();
+        prependLinkedList.getLength();
+
+        System.out.println("\nLinked List:");
+        prependLinkedList.printList();
     }
 }

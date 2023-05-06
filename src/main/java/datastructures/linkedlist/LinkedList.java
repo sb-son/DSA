@@ -33,6 +33,20 @@ public class LinkedList {
         }
     }
 
+    //prepends value to the start
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
+
     //appends a new value to the end
     public void append(int value) {
         Node newNode = new Node(value);
@@ -46,6 +60,7 @@ public class LinkedList {
         length++;
     }
 
+    //removes last value
     public Node removeLast() {
         Node temp = head;
         Node pre = tail;
