@@ -97,6 +97,18 @@ public class LinkedList {
         return temp;
     }
 
+    //get a node from the linked list at a particular index
+    public Node get(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
     //getters and setters
     public void getHead() {
         if (head == null) {

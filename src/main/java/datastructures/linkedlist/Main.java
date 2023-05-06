@@ -71,14 +71,28 @@ public class Main {
         // (0) Items - Returns null
         System.out.println(removeFirstLinkedList.removeFirst());
 
-
         /*
             EXPECTED OUTPUT:
             ----------------
             2
             1
             null
+        */
 
+        //Get an index from linked list
+        System.out.println("\nGet index from Linked list:");
+        LinkedList getIndexFromLinkedList = new LinkedList(0);
+        getIndexFromLinkedList.append(1);
+        getIndexFromLinkedList.append(2);
+        getIndexFromLinkedList.append(3);
+
+
+        System.out.println(getIndexFromLinkedList.get(3).value);
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            3
         */
     }
 }
