@@ -60,6 +60,22 @@ public class LinkedList {
         length++;
     }
 
+    //removes first value
+    public Node removeFirst() {
+        Node temp = head;
+        Node pre = tail;
+        if (length == 0) {
+            return null;
+        }
+        head = head.next;
+        temp.next = null;
+        length--;
+        if (length == 0) {
+            tail = null;
+        }
+        return temp;
+    }
+
     //removes last value
     public Node removeLast() {
         Node temp = head;

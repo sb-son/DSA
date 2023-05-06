@@ -56,7 +56,29 @@ public class Main {
         prependLinkedList.getTail();
         prependLinkedList.getLength();
 
-        System.out.println("\nLinked List:");
+        System.out.println("\nPrepend List:");
         prependLinkedList.printList();
+
+        /* removing first from a linked list */
+        System.out.println("\nRemove List:");
+        LinkedList removeFirstLinkedList = new LinkedList(2);
+        removeFirstLinkedList.append(1);
+
+        // (2) Items - Returns 2 Node
+        System.out.println(removeFirstLinkedList.removeFirst().value);
+        // (1) Item - Returns 1 Node
+        System.out.println(removeFirstLinkedList.removeFirst().value);
+        // (0) Items - Returns null
+        System.out.println(removeFirstLinkedList.removeFirst());
+
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            2
+            1
+            null
+
+        */
     }
 }
