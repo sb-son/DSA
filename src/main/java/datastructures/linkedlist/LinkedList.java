@@ -119,6 +119,31 @@ public class LinkedList {
         return false;
     }
 
+    //insert a new node of a particular value at a particular index
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) {
+            return false;
+        }
+
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+
+        if (index == length) {
+            append(value);
+            return true;
+        }
+
+        Node newNode = new Node(value);
+        Node temp = get(index - 1);
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length++;
+        return true;
+    }
+
     //getters and setters
     public void getHead() {
         if (head == null) {

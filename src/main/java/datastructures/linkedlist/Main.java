@@ -125,5 +125,57 @@ public class Main {
             99
             3
         */
+
+        //Insert new node
+        System.out.println("\nInsert new node to linked list:");
+        LinkedList insertNewNodeLinkedList = new LinkedList(0);
+        insertNewNodeLinkedList.append(1);
+        insertNewNodeLinkedList.append(2);
+        insertNewNodeLinkedList.append(3);
+
+
+        System.out.println("LL before insert():");
+        insertNewNodeLinkedList.printList();
+
+        insertNewNodeLinkedList.insert(1, 2);
+
+        System.out.println("\nLL after insert(2) in middle:");
+        insertNewNodeLinkedList.printList();
+
+        insertNewNodeLinkedList.insert(0, 0);
+
+        System.out.println("\nLL after insert(0) at beginning:");
+        insertNewNodeLinkedList.printList();
+
+        insertNewNodeLinkedList.insert(6, 11);
+
+        System.out.println("\nLL after insert(11) at end:");
+        insertNewNodeLinkedList.printList();
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            LL before insert():
+            1
+            3
+
+            LL after insert(2) in middle:
+            1
+            2
+            3
+
+            LL after insert(0) at beginning:
+            0
+            1
+            2
+            3
+
+            LL after insert(4) at end:
+            0
+            1
+            2
+            3
+            4
+        */
     }
 }
