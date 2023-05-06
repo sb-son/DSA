@@ -24,6 +24,16 @@ public class LinkedList {
         length = 1;
     }
 
+    //prints a list of values
+    public void printList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+    }
+
+    //appends a new value to the end
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -36,14 +46,27 @@ public class LinkedList {
         length++;
     }
 
-    public void printList() {
+    public Node removeLast() {
         Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.value);
+        Node pre = tail;
+        if (length == 0) {
+            return null;
+        }
+        while (temp.next != null) {
+            pre = temp;
             temp = temp.next;
         }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
     }
 
+    //getters and setters
     public void getHead() {
         if (head == null) {
             System.out.println("Head: null");
