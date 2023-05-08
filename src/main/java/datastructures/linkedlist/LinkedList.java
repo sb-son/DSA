@@ -97,6 +97,24 @@ public class LinkedList {
         return temp;
     }
 
+    //remove node at an index
+    public Node remove(int index) {
+        if (index == 0) {
+            return removeFirst();
+        }
+
+        if (index == length - 1) {
+            return removeLast();
+        }
+
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
     //get a node from the linked list at a particular index
     public Node get(int index) {
         if (index < 0 || index >= length) {

@@ -177,5 +177,61 @@ public class Main {
             3
             4
         */
+
+        LinkedList removeFromIndexLL = new LinkedList(1);
+        removeFromIndexLL.append(2);
+        removeFromIndexLL.append(3);
+        removeFromIndexLL.append(4);
+        removeFromIndexLL.append(5);
+
+        System.out.println("\nLL before remove():");
+        removeFromIndexLL.printList();
+
+        System.out.println("\nRemoved node:");
+        System.out.println(removeFromIndexLL.remove(2).value);
+        System.out.println("LL after remove() in middle:");
+        removeFromIndexLL.printList();
+
+        System.out.println("\nRemoved node:");
+        System.out.println(removeFromIndexLL.remove(0).value);
+        System.out.println("LL after remove() of first node:");
+        removeFromIndexLL.printList();
+
+        System.out.println("\nRemoved node:");
+        System.out.println(removeFromIndexLL.remove(2).value);
+        System.out.println("LL after remove() of last node:");
+        removeFromIndexLL.printList();
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            LL before remove():
+            1
+            2
+            3
+            4
+            5
+
+            Removed node:
+            3
+            LL after remove() in middle:
+            1
+            2
+            4
+            5
+
+            Removed node:
+            1
+            LL after remove() of first node:
+            2
+            4
+            5
+
+            Removed node:
+            5
+            LL after remove() of last node:
+            2
+            4
+        */
     }
 }
