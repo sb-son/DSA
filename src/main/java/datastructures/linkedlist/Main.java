@@ -233,5 +233,34 @@ public class Main {
             2
             4
         */
+
+        LinkedList reverseLinkedList = new LinkedList(1);
+        reverseLinkedList.append(2);
+        reverseLinkedList.append(3);
+        reverseLinkedList.append(4);
+
+        System.out.println("\nLL before reverse():");
+        reverseLinkedList.printList();
+
+        reverseLinkedList.reverse();
+
+        System.out.println("\nLL after reverse():");
+        reverseLinkedList.printList();
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            LL before reverse():
+            1
+            2
+            3
+            4
+
+            LL after reverse():
+            4
+            3
+            2
+            1
+        */
     }
 }
