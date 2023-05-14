@@ -54,7 +54,9 @@ public class LinkedList {
             head = newNode;
             tail = newNode;
         } else {
+            //tail.next = newNode attaches the current node tail is pointing to, to the next node in the linked list
             tail.next = newNode;
+            //tail = newNode moves tail to the new node
             tail = newNode;
         }
         length++;
