@@ -40,3 +40,24 @@ function aVeryBigSum(ar) {
 }
 
 console.log(aVeryBigSum(ar));
+
+//test case
+let arr = [ [ 11, 2, 4 ],
+    [ 4, 5, 6 ],
+    [ 10, 8, -12 ] ]
+// output of function should be 15
+
+function diagonalDifference(arr) {
+    let leftDiagonal = 0;
+    let rightDiagonal = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        leftDiagonal += arr[i][i]
+        rightDiagonal += arr[i][arr.length - i - 1]
+    }
+
+    return Math.abs(leftDiagonal - rightDiagonal)
+}
+
+console.log(diagonalDifference(arr));
+
