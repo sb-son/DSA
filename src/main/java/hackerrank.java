@@ -29,4 +29,6 @@ public class hackerrank {
         ArrayList<Integer> scores = new ArrayList<>(List.of(aliceScore, bobScore));
         return scores;
     }
+
+
 }

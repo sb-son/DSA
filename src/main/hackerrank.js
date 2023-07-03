@@ -22,6 +22,7 @@ function compareTriplets(a, b) {
 
 console.log(compareTriplets(a, b));
 
+//aVeryBigSum problem
 //test case
 let ar = [ 1000000001,
     1000000002,
@@ -41,6 +42,7 @@ function aVeryBigSum(ar) {
 
 console.log(aVeryBigSum(ar));
 
+//diagonalDifference problem
 //test case
 let arr = [ [ 11, 2, 4 ],
     [ 4, 5, 6 ],
@@ -60,4 +62,39 @@ function diagonalDifference(arr) {
 }
 
 console.log(diagonalDifference(arr));
+
+//plusMinus problem
+//test case
+arr = [-4, 3, -9, 0, 4, 1]
+/*output of function should return:
+0.500000
+0.333333
+0.166667
+*/
+
+function plusMinus(arr) {
+    let positive = 0;
+    let negative = 0;
+    let zero = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            positive++
+        } else if (arr[i] < 0) {
+            negative++
+        } else {
+            zero++
+        }
+    }
+
+    const positiveProportion = (positive / (arr.length)).toFixed(6)
+    const negativeProportion = (negative / (arr.length)).toFixed(6)
+    const zeroProportion = (zero / (arr.length)).toFixed(6)
+
+    console.log(positiveProportion);
+    console.log(negativeProportion);
+    console.log(zeroProportion);
+}
+
+plusMinus(arr);
 
