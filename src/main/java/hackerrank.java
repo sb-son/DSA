@@ -11,6 +11,19 @@ public class hackerrank {
         //should result in [1,1]
 
         System.out.println(compareTriplets(a, b));
+
+        //staircase problem
+
+        //test case
+        //should output:
+        //     #
+        //    ##
+        //   ###
+        //  ####
+        // #####
+        //######
+
+        staircase(6);
     }
 
     //compareTriplets problem
@@ -30,5 +43,20 @@ public class hackerrank {
         return scores;
     }
 
+    //staircase problem
+    public static void staircase(int n) {
+        for (int i = 1; i <= n; i++) {
+            StringBuilder spaces = new StringBuilder();
+            StringBuilder stairs = new StringBuilder();
+            for (int j = 0; j < n - i; j++) {
+                spaces.append(" ");
+            }
 
+            for (int k = 0; k < i; k++) {
+                stairs.append("#");
+            }
+
+            System.out.println(spaces.toString() + stairs);
+        }
+    }
 }
