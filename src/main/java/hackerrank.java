@@ -24,6 +24,14 @@ public class hackerrank {
         //######
 
         staircase(6);
+
+        //miniMaxSum problem
+
+        //test case
+        ArrayList<Integer> arr = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+        //should result in: 10 14
+
+        miniMaxSum(arr);
     }
 
     //compareTriplets problem
@@ -58,5 +66,29 @@ public class hackerrank {
 
             System.out.println(spaces.toString() + stairs);
         }
+    }
+
+    //miniMaxSum problem
+    public static void miniMaxSum(List<Integer> arr) {
+        // Write your code here
+        int max = arr.get(0);
+        int min = arr.get(0);
+        int sum = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            int current = arr.get(i);
+            if(max < current) {
+                max = current;
+            }
+
+            if (min > current) {
+                min = current;
+            }
+
+            sum += current;
+        }
+        int maxSum = sum - min;
+        int minSum = sum - max;
+        System.out.println(minSum + " " + maxSum);
     }
 }
