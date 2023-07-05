@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class hackerrank {
@@ -71,24 +72,19 @@ public class hackerrank {
     //miniMaxSum problem
     public static void miniMaxSum(List<Integer> arr) {
         // Write your code here
-        int max = arr.get(0);
-        int min = arr.get(0);
-        int sum = 0;
+        Collections.sort(arr);
 
-        for (int i = 0; i < arr.size(); i++) {
-            int current = arr.get(i);
-            if(max < current) {
-                max = current;
-            }
+        long maxSum = 0;
+        long minSum = 0;
 
-            if (min > current) {
-                min = current;
-            }
-
-            sum += current;
+        for (int i = 0; i < 4; i++) {
+            minSum += arr.get(i);
         }
-        int maxSum = sum - min;
-        int minSum = sum - max;
+
+        for (int i = arr.size() - 1; i >= arr.size() - 4; i--) {
+            maxSum += arr.get(i);
+        }
+
         System.out.println(minSum + " " + maxSum);
     }
 }

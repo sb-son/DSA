@@ -119,3 +119,19 @@ function staircase(n) {
 }
 
 staircase(n)
+
+//miniMaxSum problem
+
+//test case
+let miniMaxArr = [1, 2, 3, 4, 5];
+//should result in: 10 14
+miniMaxSum(miniMaxArr)
+
+function miniMaxSum(arr) {
+    arr.sort((a, b) => a - b)
+
+    const minSum = arr.slice(0, 4).reduce((a, b) => a + b, 0);
+    const maxSum = arr.slice(1).reduce((a, b) => a + b, 0);
+
+    console.log(minSum + " " + maxSum);
+}
