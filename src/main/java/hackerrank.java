@@ -33,6 +33,13 @@ public class hackerrank {
         //should result in: 10 14
 
         miniMaxSum(arr);
+
+        //birthdayCakeCandles problem
+
+        //test case
+        ArrayList<Integer> candles = new ArrayList<>(List.of(0, 3, 2, 2));
+
+        System.out.println(birthdayCakeCandles(candles));
     }
 
     //compareTriplets problem
@@ -86,5 +93,20 @@ public class hackerrank {
         }
 
         System.out.println(minSum + " " + maxSum);
+    }
+
+    public static int birthdayCakeCandles(List<Integer> candles) {
+        int maxHeight = 0;
+        int count = 0;
+
+        for(int i = 0; i < candles.size(); i++) {
+            if (candles.get(i) == maxHeight) {
+                count++;
+            } else if (candles.get(i) > maxHeight) {
+                maxHeight = candles.get(i);
+                count = 1;
+            }
+        }
+        return count;
     }
 }
