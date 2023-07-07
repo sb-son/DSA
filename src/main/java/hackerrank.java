@@ -109,4 +109,8 @@ public class hackerrank {
         }
         return count;
     }
+
+    public static String timeConversion(String s) {
+
+    }
 }
