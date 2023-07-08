@@ -40,6 +40,10 @@ public class hackerrank {
         ArrayList<Integer> candles = new ArrayList<>(List.of(0, 3, 2, 2));
 
         System.out.println(birthdayCakeCandles(candles));
+
+        String time12Hour = "07:05:45PM";
+
+        System.out.println(timeConversion(time12Hour));
     }
 
     //compareTriplets problem
@@ -111,6 +115,21 @@ public class hackerrank {
     }
 
     public static String timeConversion(String s) {
+        int hour = Integer.parseInt(s.substring(0, 2));
+        int minute = Integer.parseInt(s.substring(3, 5));
+        int second = Integer.parseInt(s.substring(6, 8));
+        boolean isAM = s.endsWith("AM");
 
+        if (isAM) {
+            if (hour == 12) {
+                hour = 0;
+            }
+        } else {
+            if (hour != 12) {
+                hour += 12;
+            }
+        }
+
+        return String.format("%02d:%02d:%02d", hour, minute, second);
     }
 }
