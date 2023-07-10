@@ -135,3 +135,32 @@ function miniMaxSum(arr) {
 
     console.log(minSum + " " + maxSum);
 }
+
+//timeConversion problem
+
+//test case
+let time12Hour = "07:05:45PM";
+//should result in 19:05:45
+
+console.log(timeConversion(time12Hour));
+
+function timeConversion(time) {
+    let hour = parseInt(time.substring(0, 2));
+    let minute = time.substring(3, 5);
+    let second = time.substring(6, 8);
+    let isAM = time12Hour.endsWith("AM");
+
+    if (isAM) {
+        if (hour == 12) {
+            hour = 0;
+        }
+    } else {
+        if (hour != 12) {
+            hour += 12;
+        }
+    }
+
+    hour = (hour < 10) ? `0${hour}` : hour;
+
+    return `${hour}:${minute}:${second}`
+}
