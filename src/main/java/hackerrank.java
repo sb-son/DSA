@@ -99,6 +99,7 @@ public class hackerrank {
         System.out.println(minSum + " " + maxSum);
     }
 
+    //birthdayCakeCandles problem
     public static int birthdayCakeCandles(List<Integer> candles) {
         int maxHeight = 0;
         int count = 0;
@@ -114,6 +115,7 @@ public class hackerrank {
         return count;
     }
 
+    //timeConversion problem
     public static String timeConversion(String s) {
         int hour = Integer.parseInt(s.substring(0, 2));
         int minute = Integer.parseInt(s.substring(3, 5));
@@ -132,4 +134,6 @@ public class hackerrank {
 
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }
+
+
 }
