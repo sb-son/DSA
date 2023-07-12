@@ -44,6 +44,14 @@ public class hackerrank {
         String time12Hour = "07:05:45PM";
 
         System.out.println(timeConversion(time12Hour));
+
+        //utopianTree problem
+        //test case
+        int height1 = utopianTree(3); //should output 6
+        int height2 = utopianTree(4); //should output 7
+
+        System.out.println(height1);
+        System.out.println(height2);
     }
 
     //compareTriplets problem
@@ -135,5 +143,18 @@ public class hackerrank {
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }
 
+    //utopianTree problem
+    public static int utopianTree(int n) {
+        int height = 1;
 
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                height *= 2;
+            } else {
+                height += 1;
+            }
+        }
+
+        return height;
+    }
 }
