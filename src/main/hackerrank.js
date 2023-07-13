@@ -164,3 +164,26 @@ function timeConversion(time) {
 
     return `${hour}:${minute}:${second}`
 }
+
+//utopianTree problem
+
+//test case
+let height1 = utopianTree(3); // should output 6
+let height2 = utopianTree(4);// should output 7
+console.log(height1)
+console.log(height2)
+
+function utopianTree(n) {
+    let height = 1;
+
+    for (let i = 1; i <= n; i++) {
+        if (i % 2 === 1) {
+            height *=2
+        } else {
+            height++;
+        }
+    }
+
+    return height;
+}
+
