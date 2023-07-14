@@ -157,4 +157,8 @@ public class hackerrank {
 
         return height;
     }
+
+    public static String angryProfessor(int k, List<Integer> a) {
+
+    }
 }
